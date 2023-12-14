@@ -2,3 +2,4 @@ __pycache__/
 results/*
 venv/
 my_container.sqsh
+.DS_Store
