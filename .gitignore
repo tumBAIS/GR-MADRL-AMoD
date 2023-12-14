@@ -1,0 +1,4 @@
+__pycache__/
+results/*
+venv/
+my_container.sqsh
