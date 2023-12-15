@@ -4,7 +4,7 @@ This software uses multi-agent SAC with a central bipartite matching in combinat
 
 This method is proposed in:
 
-> Heiko Hoppe, Tobias Eders, Quentin Cappart, Maximilian Schiffer (2023). Global Rewards in Multi-Agent Deep Reinforcement Learning for Autonomous Mobility on Demand Systems. arXiv preprint at arXiv: http://arxiv.org/abs/2312.08884.
+> Heiko Hoppe, Tobias Enders, Quentin Cappart, Maximilian Schiffer (2023). Global Rewards in Multi-Agent Deep Reinforcement Learning for Autonomous Mobility on Demand Systems. arXiv preprint at arXiv: http://arxiv.org/abs/2312.08884.
 
 All components (code, data, etc.) required to run the code for the instances considered in the paper are provided here.
 
