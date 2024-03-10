@@ -35,8 +35,8 @@
 --scheduled_discount_values=0.95, 0.99
 --scheduled_discount_steps=60000, 120000
 --normalized_rews=True
---data_dir=./data_11_small_zones
---results_dir=./results
+--data_dir=../data/data_11_small_zones
+--results_dir=../results/RL
 --algorithm_type=COMA^scd
 --avg_rew=True
 --struct_analysis=False

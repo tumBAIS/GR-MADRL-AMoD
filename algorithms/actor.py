@@ -47,7 +47,7 @@ class Actor(tf.keras.Model):
         self.graph = pd.concat([self.graph, additional_entries])
         self.max_time = self.graph.travel_time.max()
 
-        # For myopic policy rvaluation
+        # For myopic policy evaluation
         self.zones = pd.read_csv(self.data_dir + '/zones.csv', header=0, index_col=0)
         
         self.env = env

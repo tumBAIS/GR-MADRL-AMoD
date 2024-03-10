@@ -6,15 +6,21 @@ This method is proposed in:
 
 > Heiko Hoppe, Tobias Enders, Quentin Cappart, Maximilian Schiffer (2023). Global Rewards in Multi-Agent Deep Reinforcement Learning for Autonomous Mobility on Demand Systems. arXiv preprint at arXiv: http://arxiv.org/abs/2312.08884.
 
-All components (code, data, etc.) required to run the code for the instances considered in the paper are provided here.
+All components (code, data, etc.) required to run the code for the instances considered in the paper are provided here. This includes the greedy benchmark algorithm.
 
 ## Overview
-The directory `code and data` contains:
-- The code (large parts of the code are based on code from this [GitHub repository](https://github.com/tumBAIS/HybridMADRL-AMoD), `trainer.py` and `sac_discrete.py` are partly based on code from this [GitHub repository](https://github.com/keiohta/tf2rl))
-- Pre-processed data for three problem instances considered in the paper
-- An argument file `args.txt` for each problem instance (see comments in `main.py` for explanations of the arguments)
+The directory `algorithms` contains:
+- The environment implementation in `environment.py`.
+- The greedy benchmark algorithm in `greedy.py`, which can be executed using `main_greedy.py` with arguments as the exemplary ones in `args_greedy_XX_small/large_zones.txt` (see comments in `main_greedy.py` for explanations of the arguments).
+- The remaining code files implement the global-rewards-based hybrid multi-agent Soft Actor-Critic algorithm with credit assignment based on COMA, which can be executed using `main.py` with arguments as the exemplary ones in `args_RL_XX_small/large_zones.txt` (see comments in `main.py` for explanations of the arguments). Large parts of the code are based on code from this [GitHub repository](https://github.com/tumBAIS/HybridMADRL-AMoD), `trainer.py` and `sac_discrete.py` are partly based on code from this [GitHub repository](https://github.com/keiohta/tf2rl)
+
+The directory `data` contains pre-processed data for the problem instances considered in the paper.
+
+## Installation Instructions
+Executing the code requires Python and the Python packages in `requirements.txt`, which can be installed with `pip install -r requirements.txt`. 
+These packages include TensorFlow. In case of problems when trying to install TensorFlow, please refer to this [help page](https://www.tensorflow.org/install/errors).
 
 ## Code Execution
-To run the code for an instance with data and arguments `args.txt` saved in `data_dir`, execute `python main.py @data_dir/args.txt`.
+To run the code with arguments `args.txt`, execute `python main.py @args.txt` in the `algorithms` directory (analogously for the greedy algorithm). 
 
 For typical instance and neural network sizes, a GPU should be used.
